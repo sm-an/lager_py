@@ -1,0 +1,159 @@
+﻿<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="yLN)fWjek6|I$V1EG?:$">score</variable>
+    <variable id="s9Y,Oi)EkF;tBmKB(WZ%">q</variable>
+  </variables>
+  <block type="events_start_here" id="DI_start_here" deletable="false" movable="false" x="25" y="33">
+    <next>
+      <block type="variables_set" id="9k2i@b{U]$o}IVONV1SB">
+        <field name="VAR" id="yLN)fWjek6|I$V1EG?:$">score</field>
+        <field name="NAME">=</field>
+        <value name="varset">
+          <shadow type="textinline" id="5;bnxP`hf#ORhKgbDrR|">
+            <field name="text">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="variables_set" id="QKFu`+._sA56J3cbRU.#">
+            <field name="VAR" id="s9Y,Oi)EkF;tBmKB(WZ%">q</field>
+            <field name="NAME">=</field>
+            <value name="varset">
+              <shadow type="textinline" id="U-sOjG|,cBC(xK.l^DtE">
+                <field name="text">0</field>
+              </shadow>
+              <block type="input_web" id="FMe1V:k`(}$HUh?a4ac;">
+                <value name="NAME">
+                  <shadow type="stringinline" id="SwE^a#V+l*t9H~R4]]K/">
+                    <field name="text">2 x 2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="webifinline" id="KyB^;*VHv9Vxz.;Oen|M">
+                <value name="iftext">
+                  <shadow type="textinline" id="Co~mSa4^|zlI|(rT51qs">
+                    <field name="text">True</field>
+                  </shadow>
+                  <block type="webinternal" id="n65Yh5B5%8)4EPPJSo]Q">
+                    <field name="choose">==</field>
+                    <value name="first">
+                      <shadow type="textinline" id="b)oUEa+V|MZ$Qe[-@K3h">
+                        <field name="text">0</field>
+                      </shadow>
+                      <block type="variables_get" id="KzV^,yp?[0%wRS[S^Nio">
+                        <field name="VAR" id="s9Y,Oi)EkF;tBmKB(WZ%">q</field>
+                      </block>
+                    </value>
+                    <value name="last">
+                      <shadow type="textinline" id="g^iufGF2xW)P]zn))i`h">
+                        <field name="text">"4"</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="ifstate">
+                  <block type="webprintnew" id="WQSFs52=^Ucwz?Q2LbWx">
+                    <value name="text">
+                      <shadow type="textinline" id="5WdXP(p[]am3A^$CE,6N">
+                        <field name="text">Правильно! +1 балл</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="SdN(}xKeM)9*Mrx228yF">
+                        <field name="VAR" id="s9Y,Oi)EkF;tBmKB(WZ%">q</field>
+                        <field name="NAME">+=</field>
+                        <value name="varset">
+                          <shadow type="textinline" id="0@gC)l^#8wFnxkoO{U2r">
+                            <field name="text">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="webelse" id="kRVol,Xf]:/$Ib!W*;o-">
+                    <statement name="DO">
+                      <block type="webprintnew" id="FdL]lH[?QZksA@mZBPzv">
+                        <value name="text">
+                          <shadow type="textinline" id="Z/}7{]dJb1lLQ+l/`P1r">
+                            <field name="text">Неправильно 😢</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="variables_set" id="]hWTJID_7Pb#OOm=_K)3">
+                        <field name="VAR" id="s9Y,Oi)EkF;tBmKB(WZ%">q</field>
+                        <field name="NAME">=</field>
+                        <value name="varset">
+                          <shadow type="textinline">
+                            <field name="text">0</field>
+                          </shadow>
+                          <block type="input_web" id=":-aV+qLKPH@nN$dhDV:a">
+                            <value name="NAME">
+                              <shadow type="stringinline" id="!0L)c_2(`!`kbQ/5[uJk">
+                                <field name="text">Какая фамилия у Пушкина?</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="webifinline" id="8P1P^]0!E@AzuL@z1#`D">
+                            <value name="iftext">
+                              <shadow type="textinline">
+                                <field name="text">True</field>
+                              </shadow>
+                              <block type="webinternal" id="tJL=9^:CBa}kUjG_?u*Z">
+                                <field name="choose">==</field>
+                                <value name="first">
+                                  <shadow type="textinline">
+                                    <field name="text">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="9cqgWrl*Qt}{CRO:w:8H">
+                                    <field name="VAR" id="s9Y,Oi)EkF;tBmKB(WZ%">q</field>
+                                  </block>
+                                </value>
+                                <value name="last">
+                                  <shadow type="textinline" id="w#a*[;/:,rY2fDJOM/vK">
+                                    <field name="text">"Пушкин"</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="ifstate">
+                              <block type="webprintnew" id="o}qJ~Z|[;voqfj_]1l{|">
+                                <value name="text">
+                                  <shadow type="textinline" id="c?uPH/~/4zyzq[4~ZfQ;">
+                                    <field name="text">Правильно! +1 балл</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="variables_set" id="k@bG+6=35mkdpxQXaN+n">
+                                    <field name="VAR" id="s9Y,Oi)EkF;tBmKB(WZ%">q</field>
+                                    <field name="NAME">+=</field>
+                                    <value name="varset">
+                                      <shadow type="textinline" id="qxCo!b]=MhH1A$y3cPTS">
+                                        <field name="text">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+[]
+</xml>

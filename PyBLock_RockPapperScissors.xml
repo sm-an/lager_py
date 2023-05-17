@@ -1,0 +1,330 @@
+﻿<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="nSxIw@pD^B{S~tj|?2u,">figure</variable>
+    <variable id="j_F7V.3Yp2/nxX(=FUM[">vibor_user</variable>
+    <variable id="G,pBME67$=?^sJ)(=`Y-">variants</variable>
+    <variable id="pG5ewjNWzEls.s1JjbBV">vibor_comp</variable>
+  </variables>
+  <block type="events_start_here" id="DI_start_here" deletable="false" movable="false" x="25" y="33">
+    <next>
+      <block type="variables_set" id="N!*=,jMYiS@_GMY!l^AM">
+        <field name="VAR" id="nSxIw@pD^B{S~tj|?2u,">figure</field>
+        <field name="NAME">=</field>
+        <value name="varset">
+          <shadow type="textinline" id="AuWsfCL5l#g;l,qT2Uqd">
+            <field name="text">0</field>
+          </shadow>
+          <block type="input_web" id="tCd/qr:`2AA71j*^65ZC">
+            <value name="NAME">
+              <shadow type="stringinline" id="Gu~`~*hcsz}@1Gz6$V(i">
+                <field name="text">камень/ножницы/бумага</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="U`o57#1cA1U?DcJ:hrCY">
+            <field name="VAR" id="j_F7V.3Yp2/nxX(=FUM[">vibor_user</field>
+            <field name="NAME">=</field>
+            <value name="varset">
+              <shadow type="textinline" id="-ChrD#sGZdJ_zEnin#LA">
+                <field name="text">0</field>
+              </shadow>
+              <block type="upper_lower" id="#DhG[O4.AD5ti^Y1@#8^">
+                <field name="upperlower">lower</field>
+                <value name="string">
+                  <shadow type="stringinline" id="(P@tIZAT=MVE-I95,Pwf">
+                    <field name="text">hello</field>
+                  </shadow>
+                  <block type="selectlist2" id="+l${[G[;3Xc82DTL;;Ci">
+                    <field name="list" id="nSxIw@pD^B{S~tj|?2u,">figure</field>
+                    <value name="NAME">
+                      <shadow type="textinline" id="1JOjr.o]PZ9|PU2p/F4k">
+                        <field name="text">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="create_list" id="(rrNj*2(a|N5;U~Q-Hw2">
+                <field name="list" id="G,pBME67$=?^sJ)(=`Y-">variants</field>
+                <value name="text">
+                  <shadow type="textinline" id="8MN-J7_ik#XJ=A78G0~?">
+                    <field name="text">"к", "н", "б"</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="random" id="ucBy^7#e]Z5#:8Dspr3+">
+                    <next>
+                      <block type="variables_set" id="dd#[#y%(D-Oo%G[^?H8I">
+                        <field name="VAR" id="pG5ewjNWzEls.s1JjbBV">vibor_comp</field>
+                        <field name="NAME">=</field>
+                        <value name="varset">
+                          <shadow type="textinline" id="10,k|(z9e^5h)~:_R~p+">
+                            <field name="text">0</field>
+                          </shadow>
+                          <block type="random_choice" id="IYYUp1H8kBu=$pAmp]8,">
+                            <value name="text">
+                              <shadow type="textinline" id="+l~3):.uB4#9Z~lDGhJ)">
+                                <field name="text"/>
+                              </shadow>
+                              <block type="variables_get" id="YGjUMoF7*x_AB4+LQXzq">
+                                <field name="VAR" id="G,pBME67$=?^sJ)(=`Y-">variants</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="webifinline" id="1{dHe5Z4HT3IQ%jE,rsy">
+                            <value name="iftext">
+                              <shadow type="textinline" id="qk;QEQOeY[bCvUSd0iK4">
+                                <field name="text">True</field>
+                              </shadow>
+                              <block type="webinternal" id="7bp;%;x./WhS/8u5hl(U">
+                                <field name="choose">==</field>
+                                <value name="first">
+                                  <shadow type="textinline" id="Su)htCUPnpGVuB7w0[,l">
+                                    <field name="text">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id=")(NH0[SBk_y*HHluhfh7">
+                                    <field name="VAR" id="pG5ewjNWzEls.s1JjbBV">vibor_comp</field>
+                                  </block>
+                                </value>
+                                <value name="last">
+                                  <shadow type="textinline" id="v|}bZW2I?z:$VHmaAHUz">
+                                    <field name="text">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="vl=#2$?rai[t$B0$nL@D">
+                                    <field name="VAR" id="j_F7V.3Yp2/nxX(=FUM[">vibor_user</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="ifstate">
+                              <block type="webprintnew" id="TCbh*`+6VusKioHtkDTS">
+                                <value name="text">
+                                  <shadow type="textinline" id="n1^EX86Ybc/?*;PBK,[,">
+                                    <field name="text">Ничья.</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="webelifinline" id="|L}PG{~bR;NIy|a_0p-@">
+                                <value name="iftext">
+                                  <shadow type="textinline" id="FoyfrP7h{{KmZnp]{n@@">
+                                    <field name="text">True</field>
+                                  </shadow>
+                                  <block type="webandor" id="sQpFRLg@)?4ki-0k(u`O">
+                                    <field name="choose">and</field>
+                                    <value name="first">
+                                      <shadow type="textinline" id="X[~RW7v/zD*}8stOh~#Q">
+                                        <field name="text">True</field>
+                                      </shadow>
+                                      <block type="webinternal" id="FMg.H$gDvKP`hoiEl~*n">
+                                        <field name="choose">==</field>
+                                        <value name="first">
+                                          <shadow type="textinline" id=".M?5-O0!f{-Vaw|u-^HQ">
+                                            <field name="text">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="a?^ug*z).rjkRTuC#mX-">
+                                            <field name="VAR" id="j_F7V.3Yp2/nxX(=FUM[">vibor_user</field>
+                                          </block>
+                                        </value>
+                                        <value name="last">
+                                          <shadow type="textinline" id="g=$}56ROTzOL~TNZLO%q">
+                                            <field name="text">"к"</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="last">
+                                      <shadow type="textinline" id="pS.LAuvd!J}p*A^9TMXF">
+                                        <field name="text">True</field>
+                                      </shadow>
+                                      <block type="webinternal" id="e*ybU7A~9Ncp]Q%sb.rZ">
+                                        <field name="choose">==</field>
+                                        <value name="first">
+                                          <shadow type="textinline" id="|ZM%/RX@c)DyO}D:Z==`">
+                                            <field name="text"/>
+                                          </shadow>
+                                          <block type="variables_get" id="1@jo95-:%5h^Bf*%C=l~">
+                                            <field name="VAR" id="pG5ewjNWzEls.s1JjbBV">vibor_comp</field>
+                                          </block>
+                                        </value>
+                                        <value name="last">
+                                          <shadow type="textinline" id="?]y`{M^}3Mi(?n5#J+4.">
+                                            <field name="text">"н"</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="ifstate">
+                                  <block type="webprintnew" id="tF8~CR@z|X,Rwxr)vTpy">
+                                    <value name="text">
+                                      <shadow type="textinline" id="=kRfFxx$,lJFz]L2d/u!">
+                                        <field name="text">Победа 😎</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="webelifinline" id="8:dN}fWt/bMx2AYbxX)F">
+                                    <value name="iftext">
+                                      <shadow type="textinline">
+                                        <field name="text">True</field>
+                                      </shadow>
+                                      <block type="webandor" id="2=1w~W-::Kl:agR0D)tx">
+                                        <field name="choose">and</field>
+                                        <value name="first">
+                                          <shadow type="textinline">
+                                            <field name="text">True</field>
+                                          </shadow>
+                                          <block type="webinternal" id="AT!V*6)C+Rm!Pt18[.+X">
+                                            <field name="choose">==</field>
+                                            <value name="first">
+                                              <shadow type="textinline">
+                                                <field name="text">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="Pjo`X?NkFyqk{W=Y5SjN">
+                                                <field name="VAR" id="j_F7V.3Yp2/nxX(=FUM[">vibor_user</field>
+                                              </block>
+                                            </value>
+                                            <value name="last">
+                                              <shadow type="textinline" id="gbp.O-cxh0^dwWs;uch!">
+                                                <field name="text">"б"</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="last">
+                                          <shadow type="textinline">
+                                            <field name="text">True</field>
+                                          </shadow>
+                                          <block type="webinternal" id=";}97q*qc:Q4x[3Gb{j6P">
+                                            <field name="choose">==</field>
+                                            <value name="first">
+                                              <shadow type="textinline">
+                                                <field name="text"/>
+                                              </shadow>
+                                              <block type="variables_get" id="wp;Isx93aKw=jWetez,/">
+                                                <field name="VAR" id="pG5ewjNWzEls.s1JjbBV">vibor_comp</field>
+                                              </block>
+                                            </value>
+                                            <value name="last">
+                                              <shadow type="textinline" id="2I_f`Xrl8Av?9m;XHrv4">
+                                                <field name="text">"к"</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="ifstate">
+                                      <block type="webprintnew" id="p,]6b/jNvtoBexH3(v?i">
+                                        <value name="text">
+                                          <shadow type="textinline" id="zaK^)j1m.KW#tD~0ZObZ">
+                                            <field name="text">Победа 😎</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="webelifinline" id="w??|aNr`5aLwhMwo6bBT">
+                                        <value name="iftext">
+                                          <shadow type="textinline">
+                                            <field name="text">True</field>
+                                          </shadow>
+                                          <block type="webandor" id="(6i~vnv#~`kf!=Ne)(H{">
+                                            <field name="choose">and</field>
+                                            <value name="first">
+                                              <shadow type="textinline">
+                                                <field name="text">True</field>
+                                              </shadow>
+                                              <block type="webinternal" id="4dw9MM.$(f4@fU.;4@5m">
+                                                <field name="choose">==</field>
+                                                <value name="first">
+                                                  <shadow type="textinline">
+                                                    <field name="text">0</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="ksFvy*;#it]YPFwk9/6v">
+                                                    <field name="VAR" id="j_F7V.3Yp2/nxX(=FUM[">vibor_user</field>
+                                                  </block>
+                                                </value>
+                                                <value name="last">
+                                                  <shadow type="textinline" id="!Wd[|G$D=,L1Bwh`v^w/">
+                                                    <field name="text">"н"</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="last">
+                                              <shadow type="textinline">
+                                                <field name="text">True</field>
+                                              </shadow>
+                                              <block type="webinternal" id="!|moOQZXv`~]x`L:hP;O">
+                                                <field name="choose">==</field>
+                                                <value name="first">
+                                                  <shadow type="textinline">
+                                                    <field name="text"/>
+                                                  </shadow>
+                                                  <block type="variables_get" id="@!y((6S3]QkP}])1L?DO">
+                                                    <field name="VAR" id="pG5ewjNWzEls.s1JjbBV">vibor_comp</field>
+                                                  </block>
+                                                </value>
+                                                <value name="last">
+                                                  <shadow type="textinline" id="#-qCnW#DIWBTqglbyVaT">
+                                                    <field name="text">"б"</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="ifstate">
+                                          <block type="webprintnew" id="HV3zWYP9molT$E.jxO*6">
+                                            <value name="text">
+                                              <shadow type="textinline" id="X-J!JcAg=ZLE5-cZBW8=">
+                                                <field name="text">Победа 😎</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="webelse" id="bQdVT6*XaBUSFT(u6G`C">
+                                            <statement name="DO">
+                                              <block type="webprintnew" id=")fzigxhmEITLaW:{l}DJ">
+                                                <value name="text">
+                                                  <shadow type="textinline" id="J5DYz8WzQ]M`)e)9SPF#">
+                                                    <field name="text">Проигрыш 😢</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+[]
+</xml>
